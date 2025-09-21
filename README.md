@@ -9,7 +9,7 @@
 
 Bem-vindo(a) ao repositório oficial da **Comunidade Brasileira de Cibersegurança**!
 
-Este espaço nasceu da necessidade de organizar e centralizar o conhecimento, materiais de estudo, análise de vagas e as conexões geradas nos grupos de WhatsApp e Telegram, idealizados pela [Maria Clara Pimentel](https://www.linkedin.com/in/maria-clara-pimentel-a3952626b/). Nosso objetivo é criar uma base de conhecimento colaborativa, de código aberto, feita pela comunidade e para a comunidade.
+Este espaço nasceu da necessidade de organizar e centralizar conhecimento, materiais de estudo e análises de mercado em um só lugar. Nosso objetivo é criar uma base de conhecimento colaborativa e de código aberto, feita pela comunidade e para a comunidade, servindo como um ponto de encontro para aprendizado e networking.
 
 ## 🧭 Mapa do Repositório (Índice de Conteúdo)
 
@@ -17,7 +17,7 @@ Navegue pelos nossos principais recursos diretamente pelos links abaixo.
 
 ### ❓ Primeiros Passos
 * **[FAQ (Perguntas Frequentes)](./FAQ.md)** - Respostas para as dúvidas mais comuns de quem está começando.
-* **[Guia: Por Onde Começar em Cibersegurança?](./guias/materiais-de-estudo/por-onde-comecar.md)** - O ponto de partida fundamental com a "Santíssima Trindade da TI".
+* **[Guia: Por Onde Começar em Cibersegurança?](./guias/materiais-de-estudo/por-onde-comecar.md)** - O ponto de partida fundamental com os pilares essenciais de TI.
 
 ### 📚 Guias de Estudo e Carreira
 * **Guias de Estudo (Trilhas):**
@@ -28,12 +28,12 @@ Navegue pelos nossos principais recursos diretamente pelos links abaixo.
     * [Como Montar um Currículo para Cyber](./guias/carreira/curriculo.md)
 
 ### 📈 Análise de Mercado (Estudo de Vagas)
-* **[Analista de Segurança Pleno](./analise-de-mercado/analista-seguranca-pleno.md)** - Entenda na prática o que o mercado pede para um nível Pleno.
+* **[Análise de Vaga: Analista de Segurança Pleno](./analise-de-mercado/analista-seguranca-pleno.md)** - Entenda na prática o que o mercado pede para um nível Pleno.
 * _[Veja todas as análises aqui...](./analise-de-mercado/README.md)_
 
 ### 👥 Conecte-se com a Comunidade
-* **[Membros da Comunidade](./comunidade/membros/)** - Se conecte com quem faz parte da nossa comunidade!
-* **[Projetos da Comunidade](./comunidade/projetos/README.md)** - Veja os projetos que os membros estão desenvolvendo.
+* **[Membros da Comunidade](./comunidade/membros/README.md)** - Conheça e se conecte com quem faz parte da nossa comunidade!
+* **[Projetos da Comunidade](./comunidade/projetos/README.md)** - Veja os projetos incríveis que os membros estão desenvolvendo.
 
 
 ## 🤔 Como Contribuir?
