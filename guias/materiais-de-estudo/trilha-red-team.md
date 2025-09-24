@@ -10,7 +10,7 @@ Antes de mergulhar nas ferramentas, é crucial entender a filosofia por trás do
 
   * **(PT-BR) [O que é equipe vermelha?](https://www.ibm.com/br-pt/think/topics/red-teaming)**: Red Team na visão da IBM.
   * **(PT-BR) [Pensar como o Inimigo: A Arte do Red Team - IDSC](https://www.youtube.com/live/ks1gprSmcug)**: Live que aborda a mentalidade e a arte do Red Teaming.
-   * **(EN) [Responsible Red Teaming - Taggart Institute](https://taggartinstitute.org/p/responsible-red-teaming)**: Seminário sobre as considerações éticas, legais e táticas de operações Red Team.
+  * **(EN) [Responsible Red Teaming - Taggart Institute](https://taggartinstitute.org/p/responsible-red-teaming)**: Seminário sobre as considerações éticas, legais e táticas de operações Red Team.
   * **(EN) [Transitioning From OffSec to Red Teaming](https://medium.com/@ty.anderson.3/transitioning-from-offsec-to-red-teaming-165fc2e968f8)**: Um pequeno texto com várias indicações de livros para refletir sobre a "mentalidade do Red Team".
 
 ## Fases de uma Operação Red Team
@@ -27,8 +27,8 @@ Antes de mergulhar nas ferramentas, é crucial entender a filosofia por trás do
       * **Enumeração de Diretórios Web:** `dirsearch`, `gobuster`, `feroxbuster`
       * **Coleta de Informações (OSINT):** `theHarvester`, `Maltego`, `Shodan`, `web-check`
   * **Recursos de Estudo:**
-      * Não tem um curso exatamente, mas pesquise pelo "Fernando Mercês", um dos idealizadores da ONG "Mentebinária". Ele é uma das maiores referências no Brasil sobre o assunto.
-      * **(PT-BR) [Guia de OSINT do Bob Reis](https://github.com/bob-reis/OSINT)**: Uma coleção curada de recursos de OSINT.
+      * **(PT-BR)** Pesquise pelo trabalho de **[Fernando Mercês](https://github.com/merces)**, um dos idealizadores da ONG "Mentebinária". Ele é uma das maiores referências no Brasil sobre o assunto e possui diversas palestras e materiais online.
+      * **(PT-BR) [Guia de OSINT do Bob Reis](https://github.com/bob-reis/OSINT)**: Uma coleção curada de recursos de OSINT, mantida por **[Bob Reis](https://github.com/bob-reis)**.
       * **(EN) [Oh Shint\! It's a Blog](https://ohshint.gitbook.io/oh-shint-its-a-blog/)**: Blog com técnicas e write-ups de OSINT.
       * **(EN) [Awesome OSINT](https://github.com/jivoi/awesome-osint)**: Uma lista gigantesca e bem categorizada de ferramentas de OSINT.
       * **(EN) [The OSINT Framework](https://osintframework.com/)**: Framework interativo para encontrar ferramentas de OSINT.
@@ -42,7 +42,7 @@ Com base nas informações coletadas, o objetivo agora é conseguir o primeiro a
   * **Ferramentas Essenciais:**
       * **Framework de Exploração:** `Metasploit Framework`
       * **Busca de Exploits:** `searchsploit`
-      * **Ataques de Senha:** `Hydra`, `Medusa`, `SafeSpray` (BR, criada pelo Bob Reis)
+      * **Ataques de Senha:** `Hydra`, `Medusa`, `SafeSpray` (BR, criada pelo **[Bob Reis](https://github.com/bob-reis/SafeSpray)**)
       * **Simulação de Phishing:** `GoPhish`, `Evilginx2`
   * **Recursos de Estudo:**
       * **(EN) [HackTricks - Phishing Methodology](https://book.hacktricks.wiki/en/generic-methodologies-and-resources/phishing-methodology/index.html)**: Guia prático sobre Phishing (e vários outros tópicos relacionados à Fase 2).
@@ -62,7 +62,17 @@ Uma vez dentro, é preciso garantir que o acesso não seja perdido e executar co
       * **(EN) [MITRE ATT\&CK - Persistence Techniques](https://attack.mitre.org/tactics/TA0003/)**: A maior base de conhecimento sobre táticas de persistência.
       * **(EN) [IppSec no YouTube](https://www.youtube.com/c/ippsec)**: Assista a resoluções de máquinas do Hack The Box para ver técnicas de persistência na prática.
 
-### Fase 4: Escalação de Privilégios (Privilege Escalation)
+### Fase 4: Evasão de Defesas (Defense Evasion)
+
+Esta fase ocorre em paralelo com muitas outras. O objetivo é executar ações sem ser detectado por antivírus (AV), EDRs (Endpoint Detection and Response) e outras soluções de segurança.
+
+  * **Objetivo:** Ofuscar payloads, contornar monitoramento e operar "abaixo do radar".
+  * **Conceitos Chave:** Ofuscação, Criptografia, Process Injection, AMSI Bypass, "Direct Syscalls".
+  * **Recursos de Estudo:**
+      * **(PT-BR) [Papo Binário no YouTube](https://www.youtube.com/c/PapoBinario)**: Canal brasileiro com alguns conteúdos sobre engenharia reversa e desenvolvimento de malware, essencial para entender a evasão.      
+      * **(EN) [LOLBAS (Living Off The Land Binaries and Scripts)](https://lolbas-project.github.io/)**: Catálogo de binários e scripts nativos do Windows que podem ser usados para atividades maliciosas, dificultando a detecção.
+
+### Fase 5: Escalação de Privilégios (Privilege Escalation)
 
 O acesso inicial geralmente é com um usuário de poucos privilégios. O objetivo é se tornar `root` (Linux) ou `NT AUTHORITY\SYSTEM` (Windows).
 
@@ -75,9 +85,9 @@ O acesso inicial geralmente é com um usuário de poucos privilégios. O objetiv
       * **(EN) [HackTricks - Linux Privilege Escalation](https://book.hacktricks.wiki/en/linux-hardening/linux-privilege-escalation-checklist.html)**: Um checklist completo de técnicas.
       * **(EN) [HackTricks - Windows Privilege Escalation](https://book.hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/index.html)**: Checklist para ambientes Windows.
 
-### Fase 5: Movimentação Lateral e Domínio do Ambiente (Foco em Active Directory)
+### Fase 6: Movimentação Lateral e Domínio do Ambiente (Foco em Active Directory)
 
-Com privilégios máximos em uma máquina, o objetivo é se mover para outras máquinas na rede, buscando o controle total do ambiente (geralmente, o Domain Controller em redes corporativas).
+Com privilégios máximos em uma máquina, o objetivo é se mover para outras máquinas na rede, buscando o controle total do ambiente.
 
   * **Objetivo:** Comprometer outras máquinas, escalar privilégios no domínio e alcançar o objetivo final da operação.
   * **Conceitos Chave:** Pass the Hash/Ticket, Kerberoasting, Pivoting, Exfiltração de Dados, Golden/Silver Ticket.
@@ -87,9 +97,9 @@ Com privilégios máximos em uma máquina, o objetivo é se mover para outras m�
       * **Análise de AD:** `BloodHound`
       * **Pivoting:** `Chisel`, `SSH`
   * **Recursos de Estudo:**
-      * **(EN) [The Hacker Recipes - Active Directory](https://www.thehacker.recipes/ad/escalation/)**: Um "cookbook" online e direto ao ponto com comandos e técnicas para AD.    
+      * **(EN) [The Hacker Recipes - Active Directory](https://www.thehacker.recipes/ad/escalation/)**: Um "cookbook" online e direto ao ponto com comandos e técnicas para AD.
 
-### Fase 6: Red Teaming em Ambientes de Nuvem (Cloud)
+### Fase 7: Red Teaming em Ambientes de Nuvem (Cloud)
 
 As táticas se adaptam quando o alvo está em infraestrutura de nuvem (AWS, Azure, GCP).
 
@@ -100,14 +110,21 @@ As táticas se adaptam quando o alvo está em infraestrutura de nuvem (AWS, Azur
       * **Azure:** `MicroBurst`, `PowerZure`
       * **GCP:** `GCPBucketBrute`
   * **Recursos de Estudo:**
-      * Existem pouquíssimos conteúdos gratuitos nessa área, então iremos atualizar aqui conforme surgirem e eventualmente com os cursos pagos mais relevantes.
       * **(EN) [Pacu - The AWS Exploitation Framework](https://github.com/RhinoSecurityLabs/pacu)**: Documentação da principal ferramenta para pentest em AWS.
+      * **(EN) [Hacking the Cloud](https://hackingthe.cloud/)**: Um excelente recurso online com guias de ataque para diferentes provedores de nuvem.
 
-### Cursos Gratuitos Abrangentes
+### Cursos e Treinamentos (Gratuitos e Pagos)
 
-  * **(PT-BR) [Desec Security](https://desecsecurity.com/)**: Oferece cursos gratuitos de base e uma plataforma de laboratórios (a parte paga inclui mais conteúdo e labs).
-  * **(EN) [Learn Penetration Testing - TCM Security](https://academy.tcm-sec.com/p/learn-penetration-testing-free)**: Mais de 27 horas de material gratuito de alta qualidade no YouTube.
+  * **(PT-BR) [Desec Security](https://desecsecurity.com/)**: Oferece cursos gratuitos de base e uma plataforma de laboratórios (a parte paga, DEXP, inclui mais conteúdo e labs focados no mercado de trabalho).
+  * **(EN) [TCM Security - Practical Ethical Hacking](https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course)** (Pago): Um dos cursos mais recomendados para quem está começando, com uma didática excelente. A TCM também oferece conteúdo gratuito.
   * **(EN) [Hacker101](https://www.hackerone.com/hackers/hacker101)**: Conteúdo gratuito da HackerOne, focado em Bug Bounty mas com conceitos fundamentais para segurança ofensiva.
+  * **(EN) [ZeroPointSecurity - Red Team Ops (CRTO)](https://www.zeropointsecurity.co.uk/course/red-team-ops)** (Pago): Considerado o padrão ouro para quem quer aprender operações de Red Team na prática, com foco em evasão de defesas e C2.
+  * **(EN) [Offensive Security - PEN-200/OSCP e PEN-300/OSEP](https://www.offsec.com/courses/pen-200/)** (Pago): A OSCP é a certificação de entrada mais famosa. A OSEP é a continuação natural, focada em evasão de AV/EDR e movimentação lateral avançada.
+
+### Leituras Essenciais (Livros)
+
+  * **(EN) *The Hacker Playbook 3: Practical Guide To Penetration Testing*** de Peter Kim: Um guia cheio de "jogadas" e táticas para diferentes cenários de ataque.
+  * **(EN) *Operator Handbook: Red Team + OSINT + Blue Team*** de The Operator Handbook Community: Um manual de referência rápida com comandos e técnicas para o dia a dia.
 
 ### Certificações Recomendadas
 
@@ -117,5 +134,5 @@ As táticas se adaptam quando o alvo está em infraestrutura de nuvem (AWS, Azur
 
 ### Como Praticar
 
-  * **Plataformas:** Hack The Box, TryHackMe, Proving Grounds, VulnHub.
-  * **Home Lab:** Crie seu próprio laboratório com Active Directory para simular um ambiente corporativo real. Isso é essencial para treinar ataques a AD. E crie laboratórios para todos os tipos de ataques possíveis, será seu momento de maior aprendizado.
+  * **Plataformas:** **[Hack The Box](https://www.hackthebox.com/)**, **[TryHackMe](https://tryhackme.com/)**, **[Proving Grounds (OffSec)](https://www.offsec.com/labs/)**, **[VulnHub](https://www.vulnhub.com/)**.
+  * **Home Lab:** Crie seu próprio laboratório com Active Directory para simular um ambiente corporativo real. Isso é essencial para treinar ataques a AD. Use virtualização (VMware, VirtualBox, Proxmox) para criar máquinas Windows e Linux vulneráveis. Criar seus próprios laboratórios será seu momento de maior aprendizado.
