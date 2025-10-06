@@ -110,12 +110,167 @@ Assim como nos perfis, pedimos que você edite **dois arquivos**.
 
 ### Como Adicionar uma Análise de Mercado
 
-O processo é o mesmo: edite **dois arquivos**.
+**Etapa 1: Criar a Análise Individual de Vaga**
 
 1.  Encontre uma vaga interessante que possa servir como um bom material de estudo.
-2.  Vá para a pasta `/analise-de-mercado/`.
-3.  Use o **[TEMPLATE.md](./analise-de-mercado/TEMPLATE.md)** como base para criar sua análise.
-4.  Abra o arquivo **[README.md](./analise-de-mercado/README.md)** da pasta e adicione sua análise à tabela.
+2.  Identifique o nível da vaga (Estágio, Júnior, Pleno, Sênior, etc.)
+3.  Vá para a pasta correspondente em `/analise-de-mercado/[nivel]/`
+4.  Use o **[TEMPLATE.md](./analise-de-mercado/TEMPLATE.md)** como base para criar sua análise detalhada.
+5.  Salve o arquivo com um nome descritivo (ex: `analista-soc-pleno.md`)
+
+**Etapa 2: Atualizar o README da Categoria**
+
+1.  Abra o **README.md** da pasta do nível correspondente (ex: `/analise-de-mercado/4-pleno/README.md`)
+2.  Adicione uma nova linha na tabela de análises disponíveis
+3.  Atualize o contador de vagas se necessário
+
+**Etapa 3: Atualizar o RESUMO.md da Categoria (Opcional mas Recomendado)**
+
+Após adicionar várias análises em uma categoria, é importante atualizar o arquivo RESUMO.md para refletir as estatísticas consolidadas.
+
+#### 🤖 Como Gerar/Atualizar um RESUMO.md
+
+Os arquivos `RESUMO.md` são documentos analíticos que consolidam insights de **todas as vagas** de uma categoria. Eles contêm estatísticas, tendências e recomendações baseadas em dados reais.
+
+**Metodologia Recomendada:**
+
+Use um LLM (Claude, ChatGPT, etc.) com o seguinte prompt estruturado:
+
+```markdown
+# Prompt para Gerar RESUMO.md de Análise de Mercado
+
+Você é um analista de mercado de cibersegurança especializado em inteligência de carreira.
+
+**Contexto:**
+Estou atualizando o RESUMO.md da categoria [NÍVEL] da Comunidade CyberSec BR.
+
+**Arquivos para Análise:**
+[Cole aqui o conteúdo de TODAS as análises de vaga da pasta]
+
+**Tarefa:**
+Crie um documento RESUMO.md analítico seguindo EXATAMENTE esta estrutura:
+
+## Seções Obrigatórias:
+
+1. **Cabeçalho**
+   - Título: "📊 Resumo Analítico: Vagas [Categoria]"
+   - Subtítulo: "> Análise baseada em X vagas reais"
+
+2. **💰 Faixa Salarial**
+   - Tabela com média, mínima, máxima
+   - Observações sobre % de vagas que não informam salário
+   - Comparação CLT vs PJ
+
+3. **📍 Modalidade de Trabalho**
+   - Gráfico em ASCII art mostrando distribuição % (Remoto/Híbrido/Presencial)
+   - Insights sobre tendências
+
+4. **🛠️ Top 5-10 Tecnologias/Ferramentas**
+   - Tabela ranking com: Tecnologia, Categoria, % Vagas, Importância para CyberSec
+   - Baseado em DADOS REAIS das análises
+
+5. **🎓 Formação Acadêmica**
+   - Gráfico ASCII mostrando distribuição
+   - Insights sobre exigências
+
+6. **🏢 Setores que Mais Contratam**
+   - Tabela com setores, %, características, maturidade em segurança
+
+7. **🏅 Certificações Recomendadas**
+   - Tabela: Cert, Nível, ROI, Custo, Prioridade
+   - Top 5-7 certificações
+
+8. **📚 Roteiro de Estudos Consolidado**
+   - Fase 1, 2, 3 com timeline
+   - Específico para o nível analisado
+   - Certificações, habilidades, projetos
+
+9. **🚩 Red Flags e ✅ Green Flags**
+   - Listas de bandeiras vermelhas críticas
+   - Bandeiras amarelas (pontos de atenção)
+   - Bandeiras verdes (sinais positivos)
+
+10. **🌍 Distribuição Geográfica**
+    - Gráfico ASCII
+    - Insights regionais
+
+11. **📊 Estatísticas Rápidas**
+    - Bloco de código com resumo consolidado
+    - Total de vagas, faixa salarial, % remoto, etc.
+
+12. **🎯 Conclusão**
+    - Recomendações práticas para diferentes perfis
+    - Como se destacar no nível
+
+13. **🔗 Links de Navegação**
+    - Links para README da pasta, página principal, guias
+
+14. **Rodapé**
+    - Data de atualização
+    - Nota sobre contribuições
+
+**Requisitos Importantes:**
+- Use APENAS dados REAIS extraídos das análises fornecidas
+- Não invente estatísticas - se não houver dados, indique como "Não informado"
+- Use emojis para melhor visualização
+- Crie tabelas bem formatadas em Markdown
+- Gráficos ASCII para distribuições percentuais
+- Seja específico e prático nas recomendações
+- Mantenha tom educativo e focado em progressão de carreira
+
+**Formato de Saída:**
+Markdown completo pronto para salvar como RESUMO.md
+```
+
+**Instruções de Uso do Prompt:**
+
+1. Copie o prompt acima
+2. Substitua `[NÍVEL]` pela categoria (Júnior, Pleno, etc.)
+3. Cole o conteúdo de TODAS as análises .md da pasta após "Arquivos para Análise:"
+4. Execute no LLM de sua preferência (Claude, GPT-4, etc.)
+5. Revise o output gerado
+6. Salve como `RESUMO.md` na pasta da categoria
+7. Valide que todos os dados batem com as análises originais
+
+**Exemplo de Estrutura de Arquivo:**
+
+```
+analise-de-mercado/
+├── 3-junior/
+│   ├── README.md (índice das análises)
+│   ├── RESUMO.md (análise estatística - GERADO COM PROMPT)
+│   ├── analista-junior-pam.md
+│   ├── analista-fraudes.md
+│   └── ...
+```
+
+**Arquivo de Referência:**
+Veja [analise-de-mercado/1-suporte/RESUMO.md](./analise-de-mercado/1-suporte/RESUMO.md) como exemplo de qualidade esperada.
+
+**Etapa 4: Atualizar o README Principal**
+
+1.  Abra o **[README.md](./analise-de-mercado/README.md)** principal da análise de mercado
+2.  Atualize o contador total de vagas analisadas
+3.  Se criou uma nova categoria, adicione-a na tabela de navegação
+
+---
+
+## 📝 Padrões de Mensagens de Commit
+
+Para manter o histórico do projeto organizado, use os seguintes prefixos:
+
+- `feat:` - Nova funcionalidade ou conteúdo (ex: "feat: Adiciona análise de vaga SOC Pleno")
+- `docs:` - Mudanças em documentação (ex: "docs: Atualiza FAQ com pergunta sobre certificações")
+- `fix:` - Correção de erros (ex: "fix: Corrige link quebrado no README")
+- `chore:` - Tarefas de manutenção (ex: "chore: Reorganiza estrutura de pastas")
+- `refactor:` - Refatoração de conteúdo (ex: "refactor: Melhora organização do guia Red Team")
+
+**Exemplos de boas mensagens:**
+```bash
+git commit -m "feat: Adiciona análise de vaga Analista Blue Team Pleno"
+git commit -m "docs: Atualiza RESUMO.md da categoria Júnior com novas estatísticas"
+git commit -m "fix: Corrige faixa salarial na análise de SOC N1"
+```
 
 ---
 

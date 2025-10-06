@@ -28,8 +28,19 @@ Navegue pelos nossos principais recursos diretamente pelos links abaixo.
     * [Como Montar um Currículo para Cyber](./guias/carreira/curriculo.md)
 
 ### 📈 Análise de Mercado (Estudo de Vagas)
-* **[Análise de Vaga: Analista de Segurança Pleno](./analise-de-mercado/analista-seguranca-pleno.md)** - Entenda na prática o que o mercado pede para um nível Pleno.
-* _[Veja todas as análises aqui...](./analise-de-mercado/README.md)_
+
+**[📊 Ver Todas as 24 Análises de Vagas](./analise-de-mercado/README.md)** - Engenharia reversa de vagas reais organizadas por nível
+
+| Nível | Análises | Acesso Rápido |
+|-------|----------|---------------|
+| 1️⃣ Suporte/N1 | 3 vagas | [Ver pasta](./analise-de-mercado/1-suporte/) |
+| 2️⃣ Estágio | 4 vagas | [Ver pasta](./analise-de-mercado/2-estagio/) |
+| 3️⃣ Júnior | 4 vagas | [Ver pasta](./analise-de-mercado/3-junior/) |
+| 4️⃣ Pleno | 3 vagas | [Ver pasta](./analise-de-mercado/4-pleno/) |
+| 5️⃣ Sênior | 3 vagas | [Ver pasta](./analise-de-mercado/5-senior/) |
+| 6️⃣ Especialista | 2 vagas | [Ver pasta](./analise-de-mercado/6-especialista/) |
+| 7️⃣ Governança | 2 vagas | [Ver pasta](./analise-de-mercado/7-governanca/) |
+| 8️⃣ Outras | 3 vagas | [Ver pasta](./analise-de-mercado/8-outros/) |
 
 ### 👥 Conecte-se com a Comunidade
 * **[Membros da Comunidade](./comunidade/membros/README.md)** - Conheça e se conecte com quem faz parte da nossa comunidade!
