@@ -20,6 +20,7 @@ Olá! Sou o idealizador deste repositório da Comunidade Brasileira de Cibersegu
 ## 💡 Meus Projetos na Comunidade
 
 * **[Cybersec-BR](https://github.com/zer0spin/cybersec-br)** - A iniciativa de criar e manter este hub de conhecimento.
+* **[InfoSec Digest](../projetos/infosec-digest.md)** - Agregador moderno de notícias e podcasts de cibersegurança com arquitetura GitOps. [🔗 Demo](https://infosec-digest.vercel.app)
 
 ## 🔗 Conecte-se Comigo
 

@@ -14,6 +14,7 @@ Projetos focados em detecção, resposta a incidentes, análise de logs, forense
 
 | Projeto | Autor(es) | Tecnologias |
 | :--- | :--- | :--- |
+| **[InfoSec Digest](./infosec-digest.md)** | [zer0spin](./../membros/zer0spin.md) | Python, GitHub Actions, Vercel, Pico.css |
 | **Analisador de Logs em Python** | [Exemplo Fictício](./exemplo-log-analyzer-python.md) | Python, Pandas, Regex |
 | | | |
 
